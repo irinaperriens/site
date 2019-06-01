@@ -1,0 +1,662 @@
+:root {font-size: 62.5%;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+      font-family: helvetica;
+      font-size: 1.75rem;
+}
+
+/* HEADER */
+.bigscreen {
+  border-bottom: 1px solid white;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  padding: 2rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  transition: 0.5s;
+  display: none;
+}
+
+.bigscreen a {
+  text-decoration: none;
+  color: white;
+  padding-left: 8rem;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: block;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.smallscreen {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 2rem;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 3;
+  display: none;
+}
+
+.smallscreen a {
+  text-decoration: none;
+  color: white;
+  padding: 2rem;
+}
+
+
+/* HOME PAGINA*/
+
+.card {
+      height: 100vh;
+      position: relative;
+}
+
+.scrollen {
+      position: absolute;
+      left: 43vw;
+      bottom: 3vh;
+      width: 14vw;
+      text-align: center;
+}
+
+.homediv {
+      background-image: url(afbeeldingen/achtergrond.jpg);
+      background-size: cover;
+      background-position: left;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 15rem;
+}
+
+.homediv h2, .homediv p {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.homediv h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 8rem;
+}
+
+.homediv p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+
+
+
+/* OVER MIJ PAGINA*/
+.about {
+      background-image: url(afbeeldingen/achtergrond2.png);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      padding-top: 15rem;
+      position: relative;
+}
+
+.content {
+      background-color: rgba(255,255,255,0.6);
+      width: 70%;
+      height: 75%;
+      color: black;
+      padding: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      border-radius: 6px;
+      text-align: center;
+}
+
+.content p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  display: block;
+}
+
+.content h3{
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  padding: 1.5rem;
+}
+
+.ik{
+  border-radius: 50%;
+}
+
+.button {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #611B35;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  transform: translate(-50%,-50%);
+  transition: 1s all ease;
+  bottom: 15rem;;
+}
+
+.button::before{
+  background: #611B35;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  height: 10rem;;
+  width: 0%;
+}
+
+.button:hover::before{
+  width: 20rem;;
+}
+
+.about nav {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.about nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+/* WERKEN PAGINA */
+
+.digitaal {
+  background-image: url(afbeeldingen/achtergrond3.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.digitaal h2, .digitaal p {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.digitaal h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.traditioneel h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  padding-top: 6rem;
+  text-align: center;
+}
+
+.carouselAfb{
+  position: relative;
+  margin: auto;
+  padding-top: 3rem;
+  margin-top: 2rem;
+}
+
+.afbeeelding, .afbeeelding2 {
+  width: 40rem;
+  height: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.afbeeelding img, .afbeeelding2 img {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  border: 3px solid  rgba(255,255,255, 0.6);
+  animation: fadeIn 0.5s ease-in 1;
+  border-radius: 6px;
+}
+
+
+@keyframes fadeIn {
+  0%{opacity: 0};
+  100%{opacity: 1};
+}
+
+#prevButton, #nextButton, #prevButton2, #nextButton2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  text-decoration: none;
+  color:  #6A1D00;
+  font-size: 3rem;
+  background-color: rgba(255,255,255, 0.6);
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 50px;
+}
+
+
+#nextButton, #nextButton2 {
+  top: 25rem;
+  right: 2rem;
+}
+
+#prevButton, #prevButton2 {
+  top: 25rem;
+  left: 2rem;
+}
+
+.onzichtbaar{
+  display: none;
+}
+
+.text, .text2{
+  padding: 2rem;
+  background-color: rgba(255,255,255, 0.6);
+  height: 6rem;
+  border-radius: 6px;
+}
+
+.traditioneel nav {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.traditioneel nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.traditioneel nav a:hover{
+  transform: scale(2);
+}
+
+/* DIGITAAL */
+
+  .traditioneel{
+    background-image: url(afbeeldingen/achtergrond4.png);
+    background-size: cover;
+    background-position: right;
+  }
+
+  .traditioneel h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    padding-top: 6rem;
+    text-align: center;
+    color: white;
+  }
+
+  #prevButton2, #nextButton2 {
+    color:  #192D1D;
+  }
+
+  .carouselAfb2 {
+    position: relative;
+    margin: auto;
+    padding-top: 3rem;
+    margin-top: 2rem;
+  }
+
+
+
+  /* SKILLS PAGINA*/
+
+  .skillsdiv{
+    background-image: url(afbeeldingen/achtergrond5.jpg);
+    background-size: cover;
+    background-position: right;
+  }
+
+  .skillsdiv h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    padding-top: 6rem;
+    text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  .containerskills {
+    background-color: rgba(255,255,255,0.8);
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    border-radius: 6px;
+  }
+
+  .containerskills p {
+    text-align: left;
+    text-transform: uppercase;
+    margin: 1rem;
+  }
+
+  .lijn {
+    height: 25px;
+    margin: 0 auto 1rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: white;
+    padding: 0 0 0 1rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  .lijn:before{
+    content: " ";
+    width: 100%;
+    position: absolute;
+    left:0;
+    height: 2.5rem;
+    top:0;
+    background-color: #f8a7f3;
+    z-index: 1;
+    border-radius: 50px;
+  }
+
+  .lijn:after{
+    content: " ";
+    background-color: #601b61;
+    height: 2.5rem;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+    border-radius: 50px;
+  }
+
+  .lijn1:after{
+    width: 80%;
+    animation: level 4s 1;
+    transition: 0.8s;
+  }
+
+  .lijn2:after{
+    width: 50%;
+    animation: level2 4s 1;
+    transition: 0.8s;
+  }
+
+  .lijn3:after{
+    width: 90%;
+    animation: level3 4s 1;
+    transition: 0.8s;
+  }
+
+  .lijn4:after{
+    width: 80%;
+    animation: level4 4s 1;
+    transition: 0.8s;
+  }
+
+  .lijn5:after{
+    width: 90%;
+    animation: level5 4s 1;
+    transition: 0.8s;
+  }
+
+  .lijn6:after{
+    width: 60%;
+    animation: level6 4s 1;
+    transition: 0.8s;
+  }
+
+@keyframes level {
+    0%{ width:0%; }
+    100%{ width:80%; }}
+
+@keyframes level2 {
+    0%{ width:0%; }
+    100%{ width:50%; }}
+
+@keyframes level3 {
+    0%{ width:0%; }
+    100%{ width:90%; }}
+
+@keyframes level4 {
+    0%{ width:0%; }
+    100%{ width:80%; }}
+
+@keyframes level5 {
+    0%{ width:0%; }
+    100%{ width:90%; }}
+
+@keyframes level6 {
+    0%{ width:0%; }
+    100%{ width:60%; }}
+
+/* CONTACT */
+
+.contact {
+  background-image: url(afbeeldingen/achtergrond6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact h2{
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  padding-top: 6rem;
+  text-align: center;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.contactcontainer{
+  background-color: rgba(255,255,255,0.8);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* FORM */
+
+form{
+  padding-left: 2rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+input {
+  display: block;
+}
+
+input[type=text], input[type=email]{
+  border-radius: 50px;
+  padding: 0.5rem;
+  border: 0;
+  margin: 1rem;
+}
+
+textarea {
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 0;
+  margin: 1rem;
+  display: block;
+}
+
+.buttonform {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #732909;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  transform: translate(-50%,-50%);
+  transition: 1s all ease;
+  bottom: 1rem;
+  right: 0;
+  background-color: transparent;
+  color: black;
+}
+
+.buttonform::before{
+  background-color: #732909;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  height: 10rem;;
+  width: 0%;
+}
+
+.buttonform:hover::before{
+  width: 20rem;
+}
+
+/* DANK JE */
+
+.dankje {
+  background-image: url(afbeeldingen/achtergrond7.png);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dankje h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  padding-top: 30rem;
+  text-align: center;
+  color: white;
+}
+
+.dankjebtn {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #337889;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  transform: translate(-50%,-50%);
+  transition: 1s all ease;
+  bottom: 1rem;
+  right: 0;
+  background-color: transparent;
+  color: white;
+}
+
+.dankjebtn::before{
+  background-color: #337889;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  height: 10rem;;
+  width: 0%;
+}
+
+.dankjebtn:hover::before{
+  width: 20rem;
+}
+
+@media (min-width: 800px) {
+
+  /* NAV */
+
+  .bigscreen {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .contactcontainer {
+    width: 45%;
+  }
+
+}
+
+
+@media (min-width: 1400px) {
+
+  /* NAV */
+
+  .bigscreen {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .contactcontainer {
+    width: 25%;
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40rem;
+    height: 32rem;
+  }
+
+  .foto{
+    grid-column: 1;
+  }
+
+  .wiebenik{
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .button{
+    bottom: 26rem;
+    left: 80rem;
+  }
+
+  .ik{
+    border-radius: 60px;
+    width: 140px;
+    bottom: 36rem;
+    left: 60rem;
+    position: absolute;
+
+  }
+
+}

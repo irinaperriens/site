@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Portfolio home</title>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="reset_plus.css">
+		<link rel="stylesheet" type="text/css" href="stijl.css">
+		<script src="script.js" defer></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+			<header>
+					<nav class="bigscreen">
+								<a href="index.html">HOME</a>
+								<a href="index.html">ABOUT ME</a>
+								<a href="werken.html">WERKEN</a>
+								<a href="skills.html">SKILLS</a>
+								<a href="#">CONTACT</a>
+					</nav>
+					<a href="#" class="hamburger"><img src="afbeeldingen/hamburger.png" alt="hamburger" width="30px"></a>
+
+					<nav class="smallscreen">
+								<a href="index.html">HOME</a>
+								<a href="index.html">ABOUT ME</a>
+								<a href="werken.html">WERKEN</a>
+								<a href="skills.html">SKILLS</a>
+								<a href="#">CONTACT</a>
+					</nav>
+			</header>
+
+			<main>
+				<div class="skillsdiv card">
+						<div class="textcontainer">
+							<h2>Skills</h2>
+              <div class="containerskills">
+                  <p>HTML/CSS</p>
+                  <div class="lijn lijn1">80%</div>
+                  <p>JavaScript</p>
+                  <div class="lijn lijn2">50%</div>
+                  <p>Photoschop</p>
+                  <div class="lijn lijn3">90%</div>
+                  <p>Illustrator</p>
+                  <div class="lijn lijn4">80%</div>
+                  <p>InDesign</p>
+                  <div class="lijn lijn5">90%</div>
+                  <p>AfterEffects</p>
+                  <div class="lijn lijn6">60%</div>
+              </div>
+						</div>
+						<a href="#" data-factor="1" class="scrollen"> <img src="afbeeldingen/peiltje.png" alt="peiltje" width="30px"> </a>
+				</div>
+
+				<div class="contact card"  id="contact">
+						<h2>Contact</h2>
+						<div class="contactcontainer">
+
+							<script type="text/javascript">let submitted=false;</script>
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+							onload="if(submitted) {window.location='thankyou.html';}"></iframe>
+
+
+							<form action="https://docs.google.com/forms/d/e/1FAIpQLSdgZIhnXBQBcew4VtmJdGcK75F93hW0uVfhmvoTQIeWTnCDbQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+						      <label>Naam</label>
+						      <input type="text" placeholder="Naam" name="entry.2005620554" required>
+
+						      <label>E-mail</label>
+						      <input type="email" placeholder="E-mail" name="entry.1045781291" required>
+
+						      <label>Onderwerp</label>
+						      <input type="text" placeholder="Onderwerp" name="entry.839337160">
+
+						      <label>Bericht</label>
+						      <textarea rows="5" placeholder="bericht" name="entry.1328423666" required></textarea>
+
+						      <button type="submit" class="buttonform">Send</button>
+							</form>
+
+						</div>
+
+				</div>
+			</main>
+	</body>
+</html>
